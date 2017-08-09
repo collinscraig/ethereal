@@ -13,7 +13,7 @@ title: Welcome to Middleman
                 <div class="content color0 span-3-75">
                     <h1 class="major"><%= dato.homepage.title %></h1>
                     <h2 class="major"><%= dato.homepage.subtitle %></h2>
-                    <p>This is <strong>Ethereal</strong>, a free site template by AJ for <a href="https://html5up.net">HTML5 UP</a>. It’s fully responsive, built on HTML5 and CSS3, and released entirely for free under the Creative Commons license. Hope you dig it :)</p>
+                    <%= dato.homepage.description %>
                     <ul class="actions">
                         <li><a href="/" class="button special color1 circle icon fa-angle-right">Next</a></li>
                     </ul>
@@ -23,11 +23,11 @@ title: Welcome to Middleman
                 </div>
             </section>
 
-            <% dato.homepage.quote.each do |quote| %>
+            <% dato.homepage.featured_quotes.each do |quote| %>
                 <!-- Panel (Spotlight) -->
                 <section class="panel spotlight medium right" id="first">
                     <div class="content span-7">
-                        <h2 class="major">Hello Craig Development<%= quote.author %></h2>
+                        <h2 class="major"><%= quote.author %></h2>
                         <p><%= quote.quote %></p>
                     </div>
                     <div class="image filtered tinted" data-position="top left">
